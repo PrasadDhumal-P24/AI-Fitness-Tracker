@@ -1,0 +1,559 @@
+/* ===== AUTH PAGE ===== */
+.auth__page {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ===== LEFT SIDE ===== */
+.auth__left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.auth__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.auth__left-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(10, 10, 15, 0.3) 0%,
+      rgba(10, 10, 15, 0.85) 70%,
+      rgba(10, 10, 15, 0.97) 100%);
+}
+
+.auth__left-content {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem;
+  width: 100%;
+}
+
+.auth__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.auth__logo strong {
+  color: var(--primary);
+}
+
+.auth__logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.auth__left-text {
+  margin-bottom: 2rem;
+}
+
+.auth__left-text h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.auth__left-text p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Left Stats */
+.auth__left-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.auth__left-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+}
+
+.auth__left-stat strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+}
+
+.auth__left-stat span {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Benefits */
+.auth__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.auth__benefit {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+/* ===== RIGHT SIDE ===== */
+.auth__left-text h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.auth__form-wrap {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Step Indicator */
+.auth__steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.auth__step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--dark-card);
+  border: 2px solid var(--dark-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.auth__step-dot.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.auth__step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--dark-border);
+  transition: var(--transition);
+}
+
+.auth__step-line.active {
+  background: var(--primary);
+}
+
+/* Form Header */
+.auth__form-header {
+  margin-bottom: 1.8rem;
+}
+
+.auth__form-header h1 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+.auth__form-header p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+/* Error */
+.auth__error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #EF4444;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.auth__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auth__field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.auth__field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth__forgot {
+  font-size: 0.78rem;
+  color: var(--primary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+/* Input */
+.auth__input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth__icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+.auth__input-wrap input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  outline: none;
+  transition: var(--transition);
+}
+
+.auth__input-wrap input:focus {
+  border-color: var(--primary);
+  background: rgba(255, 107, 53, 0.04);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.08);
+}
+
+.auth__input-wrap input::placeholder {
+  color: var(--text-light);
+}
+
+.auth__eye {
+  position: absolute;
+  right: 14px;
+  background: none;
+  color: var(--text-light);
+  display: flex;
+  transition: var(--transition);
+}
+
+.auth__eye:hover {
+  color: var(--primary);
+}
+
+/* Goals Grid */
+.auth__goals-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.auth__goal-btn {
+  padding: 0.65rem 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: left;
+  transition: var(--transition);
+  font-family: 'Inter', sans-serif;
+}
+
+.auth__goal-btn:hover {
+  border-color: var(--primary);
+  color: white;
+  background: rgba(255, 107, 53, 0.06);
+}
+
+.auth__goal-btn.selected {
+  border-color: var(--primary);
+  background: rgba(255, 107, 53, 0.12);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Select */
+.auth__select-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth__select {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.auth__select:focus {
+  border-color: var(--primary);
+  background: rgba(255, 107, 53, 0.04);
+}
+
+.auth__select option {
+  background: var(--dark-card);
+  color: white;
+}
+
+.auth__select-arrow {
+  position: absolute;
+  right: 14px;
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+/* Submit Button */
+.auth__submit {
+  width: 100%;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+  box-shadow: 0 8px 24px rgba(255,107,53,0.35);
+  margin-top: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.auth__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255,107,53,0.45);
+}
+
+.auth__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 107, 53, 0.4);
+}
+
+.auth__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Form Buttons (step 2) */
+.auth__form-btns {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.auth__back-btn {
+  padding: 0.9rem 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--dark-border);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.auth__back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.auth__submit--flex {
+  flex: 1;
+}
+
+/* Spinner */
+.auth__spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Divider */
+.auth__divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.2rem 0;
+  color: var(--text-light);
+  font-size: 0.82rem;
+}
+
+.auth__divider::before,
+.auth__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--dark-border);
+}
+
+/* Google Button */
+.auth__google {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: var(--transition);
+  font-family: 'Inter', sans-serif;
+}
+
+.auth__google:hover {
+  border-color: var(--primary);
+  background: rgba(255, 107, 53, 0.06);
+}
+
+/* Switch */
+.auth__switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.auth__switch a {
+  color: var(--primary);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.auth__switch a:hover {
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .auth__page {
+    flex-direction: column;
+  }
+
+  .auth__left {
+    min-height: 220px;
+    flex: none;
+  }
+
+  .auth__left-stats {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .auth__right {
+    width: 100%;
+    padding: 2rem 1.2rem;
+  }
+
+  .auth__goals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth__left-text h2 {
+    font-size: 1.4rem;
+  }
+}
+/* Professional Form Card Look */
+.auth__form-wrap {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Better Left Overlay */
+.auth__left-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(10,10,15,0.2) 0%,
+    rgba(10,10,15,0.6) 40%,
+    rgba(10,10,15,0.95) 85%,
+    rgba(10,10,15,1) 100%
+  );
+}
+
+/* Better Logo */
+.auth__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
