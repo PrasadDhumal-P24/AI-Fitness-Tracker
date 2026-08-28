@@ -1,0 +1,362 @@
+/* ===== PROGRESS PAGE ===== */
+.progress__page {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Header */
+.progress__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.progress__header h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 0.2rem;
+}
+
+.progress__header p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Stats Row */
+.progress__stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.progress__stat-box {
+    background: var(--dark-card);
+    border: 1px solid;
+    border-radius: 16px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition);
+}
+
+.progress__stat-box:hover {
+    transform: translateY(-2px);
+}
+
+.progress__stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.progress__stat-info {
+    flex: 1;
+}
+
+.progress__stat-val {
+    font-size: 1.4rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.progress__stat-val span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-left: 2px;
+}
+
+.progress__stat-label {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+}
+
+.progress__stat-change {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.progress__stat-change.up {
+    background: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+.progress__stat-change.down {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+}
+
+/* Chart Section */
+.progress__chart-section {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.progress__chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.progress__chart-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: white;
+}
+
+.progress__chart-info {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+/* Chart */
+.progress__chart-wrap {
+    padding: 1.5rem 1rem 1rem;
+}
+
+/* Custom Tooltip */
+.chart__tooltip {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-border);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.chart__tooltip-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.chart__tooltip-val {
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+/* Weight Log */
+.progress__log {
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid var(--dark-border);
+}
+
+.progress__log-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+.progress__log-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.progress__log-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 0.85rem;
+}
+
+.progress__log-item:last-child {
+    border-bottom: none;
+}
+
+.progress__log-date {
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    flex: 1;
+}
+
+.progress__log-weight {
+    font-weight: 800;
+    color: white;
+}
+
+.progress__log-diff {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 20px;
+}
+
+.progress__log-diff.up {
+    background: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+.progress__log-diff.down {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+}
+
+.progress__log-note {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Workout Summary */
+.progress__workout-summary {
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid var(--dark-border);
+    flex-wrap: wrap;
+}
+
+.progress__summary-card {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--dark-border);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.progress__summary-card strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: white;
+}
+
+.progress__summary-card span {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+}
+
+/* PR Grid */
+.progress__pr-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.progress__pr-card {
+    background: rgba(245, 158, 11, 0.06);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    border-radius: 14px;
+    padding: 1.2rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.progress__pr-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.progress__pr-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #F59E0B;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+}
+
+.progress__pr-name {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.progress__pr-stats {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.progress__pr-stats span {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.progress__pr-weight {
+    color: #F59E0B !important;
+    font-weight: 700 !important;
+    background: rgba(245, 158, 11, 0.1) !important;
+}
+
+.progress__pr-date {
+    font-size: 0.7rem;
+    color: var(--text-light);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .progress__page {
+        padding: 1rem;
+    }
+
+    .progress__stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progress__pr-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progress__workout-summary {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .progress__stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progress__pr-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress__stat-box {
+        padding: 0.9rem;
+    }
+
+    .progress__stat-val {
+        font-size: 1.1rem;
+    }
+}
