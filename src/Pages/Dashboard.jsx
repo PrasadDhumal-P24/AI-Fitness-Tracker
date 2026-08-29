@@ -1463,6 +1463,7 @@ import './Dashboard.css'
 import Workout from './Workout'
 import Nutrition from './Nutrition'
 import Progress from './Progress'
+import AICoach from './AICoach'
 
 // Sidebar nav items
 const NAV_ITEMS = [
@@ -1670,11 +1671,21 @@ function Dashboard() {
   //   }
   // }
 
+  // const renderContent = () => {
+  //   switch (activeNav) {
+  //     case 'workouts': return <Workout />
+  //     case 'nutrition': return <Nutrition />
+  //     case 'progress': return <Progress />
+  //     default: return null
+  //   }
+  // }
+
   const renderContent = () => {
     switch (activeNav) {
       case 'workouts': return <Workout />
       case 'nutrition': return <Nutrition />
       case 'progress': return <Progress />
+      case 'ai': return <AICoach />
       default: return null
     }
   }
