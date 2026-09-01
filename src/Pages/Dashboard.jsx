@@ -1464,14 +1464,24 @@ import Workout from './Workout'
 import Nutrition from './Nutrition'
 import Progress from './Progress'
 import AICoach from './AICoach'
+import Habits from './Habits'
 
 // Sidebar nav items
+// const NAV_ITEMS = [
+//   { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard' },
+//   { icon: Dumbbell, label: 'Workouts', id: 'workouts' },
+//   { icon: Apple, label: 'Nutrition', id: 'nutrition' },
+//   { icon: BarChart3, label: 'Progress', id: 'progress' },
+//   { icon: Brain, label: 'AI Coach', id: 'ai' },
+// ]
+
 const NAV_ITEMS = [
   { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard' },
   { icon: Dumbbell, label: 'Workouts', id: 'workouts' },
   { icon: Apple, label: 'Nutrition', id: 'nutrition' },
   { icon: BarChart3, label: 'Progress', id: 'progress' },
   { icon: Brain, label: 'AI Coach', id: 'ai' },
+  { icon: Heart, label: 'Habits', id: 'habits' },
 ]
 
 // Quick log data
@@ -1680,12 +1690,24 @@ function Dashboard() {
   //   }
   // }
 
+  // const renderContent = () => {
+  //   switch (activeNav) {
+  //     case 'workouts': return <Workout />
+  //     case 'nutrition': return <Nutrition />
+  //     case 'progress': return <Progress />
+  //     case 'ai': return <AICoach />
+  //     default: return null
+  //   }
+  // }
+
+
   const renderContent = () => {
     switch (activeNav) {
       case 'workouts': return <Workout />
       case 'nutrition': return <Nutrition />
       case 'progress': return <Progress />
       case 'ai': return <AICoach />
+      case 'habits': return <Habits />
       default: return null
     }
   }
