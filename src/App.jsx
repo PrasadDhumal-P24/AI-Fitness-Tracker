@@ -47,13 +47,23 @@
 
 // export default App
 
+// import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// import Header from "./components/header/Header";
+// import Login from "./components/Auth/login";
+// import Signup from "./components/Auth/signup";
+// import ProtectedRoute from "./components/UI/ProtectedRoute";
+
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './Components/Header/Header'
+import Header from './components/header/Header'
 import Home from './Pages/Home'
 import Login from './Components/Auth/Login'
-import Signup from './Components/Auth/Signup'
+import Signup from './components/Auth/signup'
+// import login from './components/Auth/login'
+// import signup from './components/Auth/signup'
 import Dashboard from './Pages/Dashboard'
-import ProtectedRoute from './Components/ProtectedRoute'
+import ProtectedRoute from './components/ProtectedRoute'
 import './App.css'
 
 function App() {
