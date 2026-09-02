@@ -58,7 +58,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/header/Header'
 import Home from './Pages/Home'
-import Login from './Components/Auth/Login'
+import Login from './components/Auth/Login'
 import Signup from './components/Auth/signup'
 // import login from './components/Auth/login'
 // import signup from './components/Auth/signup'
