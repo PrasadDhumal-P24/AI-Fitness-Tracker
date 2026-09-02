@@ -1933,7 +1933,10 @@ function Dashboard() {
                         : "💡 Consider periodization — alternate between high volume and high intensity weeks to break through plateaus."
                     }
                   </p>
-                  <button className="dash__ai-chat-btn">
+                  <button
+                    className="dash__ai-chat-btn"
+                    onClick={() => setActiveNav('ai')}
+                  >
                     Chat with AI Coach
                     <ChevronRight size={16} />
                   </button>
@@ -2031,7 +2034,10 @@ function Dashboard() {
                       <span className="dash__suggested-detail">{ex.detail}</span>
                     </div>
                   ))}
-                  <button className="dash__start-btn">
+                  <button
+                    className="dash__start-btn"
+                    onClick={() => setActiveNav('workouts')}
+                  >
                     Start This Workout →
                   </button>
                 </div>
@@ -2108,7 +2114,10 @@ function Dashboard() {
                   <div className="dash__empty dash__empty--small">
                     <Apple size={32} color="var(--text-light)" />
                     <p>No meals logged today</p>
-                    <button className="dash__empty-btn">
+                    <button
+                      className="dash__empty-btn"
+                      onClick={() => setActiveNav('nutrition')}
+                    >
                       <Plus size={14} />
                       Log First Meal
                     </button>
