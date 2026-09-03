@@ -29,7 +29,7 @@ A modern fitness tracking web application built with React and AI integration to
 
 ## 🌐 Live Demo
 
-
+https://github.com/PrasadDhumal-P24/ai-fitness-tracker.git
 
 ## 💻 Installation
 
